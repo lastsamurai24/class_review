@@ -1,23 +1,4 @@
-"""class Customer:
-    def __init__(self, first_name, family_name):
-        self.first_name = first_name
-        self.family_name = family_name
-
-    def full_name(self):
-        return f"{self.first_name} {self.family_name}"
-    def entry_fee(self,):
-        if self.age < 20 :
-            return 1000
-        elif 20 <= self.age < 65 :
-            return 1500
-        elif 65 < self.age :
-            return 1200
-    def info_csv(self):
-"""
-
-
-"""
-c-1
+#c-1
 class Customer:
     def __init__(self, first_name, family_name):
         self.first_name = first_name
@@ -31,10 +12,10 @@ print(ken.full_name())
 tom = Customer(first_name="Tom", family_name="Ford")
 tom.full_name()
 print(tom.full_name())
-"""
 
-"""
-c-2
+
+
+#c-2
 class Customer:
     def __init__(self, first_name, family_name,age):
         self.age= age
@@ -49,10 +30,9 @@ ieyasu.age # 73 という値を返す
 print(ken.age)
 print(tom.age)
 print(ieyasu.age)
-"""
 
-"""
-c-3
+
+#c-3
 class Customer: 
     def __init__(self, first_name, family_name,age):
         self.age= age
@@ -72,4 +52,36 @@ print(f"tomは{tom.entry_fee()}円です")
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
 ieyasu.entry_fee() # 1200 という値を返す
 print(f"ieyasuは{ieyasu.entry_fee()}円です")
-"""
+
+
+#c-4
+class Customer:
+    def __init__(self, first_name, family_name, age=None):
+        self.first_name = first_name
+        self.family_name = family_name
+        self.age = age
+
+    def full_name(self):
+        return f"{self.first_name} {self.family_name}"
+
+    def entry_fee(self):
+        if self.age is None:
+            return None
+        if self.age < 20:
+            return 1000
+        elif 20 <= self.age < 65:
+            return 1500
+        elif 65 <= self.age:
+            return 1200
+
+    def info_csv(self):
+        fee = self.entry_fee()
+        fee_str = str(fee)
+        return f"{self.first_name} {self.family_name},{self.age},{fee_str}"
+    
+ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
+tom = Customer(first_name="Tom", family_name="Ford", age=57)
+ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
+print(ken.info_csv())
+print(tom.info_csv())
+print(ieyasu.info_csv())
