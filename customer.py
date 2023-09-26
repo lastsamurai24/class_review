@@ -189,7 +189,7 @@ class Customer:
             return 500
 
     def info_csv(self):
-        return f"{self.full_name()}{self.age}{self.entry_fee()}"
+        return f"{self.full_name()},{self.age},{self.entry_fee()}"
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
@@ -231,10 +231,7 @@ class Customer:
         elif 75 <= self.age:
             return 500
 
-    def info_csv(self):
-        return f"{self.full_name()}{self.age}{self.entry_fee()}"
-
-    def info_csv_tab(self):
+    def info_tab(self):
         return f"{self.full_name()}\t{self.age}\t{self.entry_fee()}"
 
 
@@ -243,11 +240,11 @@ tom = Customer(first_name="Tom", family_name="Ford", age=57)
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
 minion = Customer(first_name="Minion", family_name="Min", age=1)
 hayao = Customer(first_name="Hayao", family_name="Miyazaki", age=82)
-print(ken.info_csv_tab())
-print(tom.info_csv_tab())
-print(ieyasu.info_csv_tab())
-print(minion.info_csv_tab())
-print(hayao.info_csv_tab())
+print(ken.info_tab())
+print(tom.info_tab())
+print(ieyasu.info_tab())
+print(minion.info_tab())
+print(hayao.info_tab())
 
 print("------------------課題C-8----------------------")
 
@@ -277,14 +274,8 @@ class Customer:
         elif 75 <= self.age:
             return 500
 
-    def info_csv(self):
-        return f"{self.full_name()}{self.age}{self.entry_fee()}"
-
-    def info_csv_tab(self):
-        return f"{self.full_name()}\t{self.age}\t{self.entry_fee()}"
-
-    def info_csv_p(self):
-        return f"{self.full_name()}\t|{self.age}\t|{self.entry_fee()}"
+    def info_pipe(self):
+        return f"{self.full_name()}|{self.age}|{self.entry_fee()}"
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
@@ -292,8 +283,8 @@ tom = Customer(first_name="Tom", family_name="Ford", age=57)
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
 minion = Customer(first_name="Minion", family_name="Min", age=1)
 hayao = Customer(first_name="Hayao", family_name="Miyazaki", age=82)
-print(ken.info_csv_p())
-print(tom.info_csv_p())
-print(ieyasu.info_csv_p())
-print(minion.info_csv_p())
-print(hayao.info_csv_p())
+print(ken.info_pipe())
+print(tom.info_pipe())
+print(ieyasu.info_pipe())
+print(minion.info_pipe())
+print(hayao.info_pipe())
